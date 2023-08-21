@@ -1,15 +1,20 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
 import TourCard from "./components/TourCard";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
 
 export default function App() {
   return (
     <div>
-      <h1>Scratch with Material UI</h1>
-      <TourCard />
-      <Button variant="contained" color="secondary">
-        Hello world
-      </Button>
+      <Container>
+        <Grid container spacing={5}>
+          <TourCard />
+          <TourCard />
+          <TourCard />
+          <TourCard />
+        </Grid>
+      </Container>
     </div>
   );
 }
