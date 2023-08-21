@@ -1,5 +1,6 @@
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
 export default function TourCard() {
@@ -15,10 +16,11 @@ export default function TourCard() {
           src="https://images.unsplash.com/photo-1533094602577-198d3beab8ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
           alt="niagara.jpg"
         />
-
-        <Typography component="h2" variant="subtitle2">
-          Immerse Into The Falls
-        </Typography>
+        <Box paddingX={1}>
+          <Typography component="h2" variant="subtitle2">
+            Immerse Into The Falls
+          </Typography>
+        </Box>
       </Paper>
     </Grid>
   );
