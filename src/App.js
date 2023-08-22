@@ -7,9 +7,12 @@ import "./App.css";
 import axios from "axios";
 import PostList from "./components/PostList";
 import AppPagination from "./components/Pagination/AppPagination";
+import TodoList from "./components/TodoList";
 
 export default function App() {
   const [posts, setPosts] = useState([]);
+  const [todos, setTodos] = useState([]);
+  const [visible, setVisible] = useState(4);
   const [page, setPage] = useState(1);
   const [pageNumbers, setPageNumbers] = useState(0);
 
@@ -25,14 +28,31 @@ export default function App() {
       });
   };
 
+  const fetchTodos = () => {
+    axios
+      .get("https://jsonplaceholder.typicode.com/todos")
+      .then((res) => setTodos(res.data));
+  };
+
   useEffect(() => {
     fetchPosts();
   }, [page]);
 
+  useEffect(() => {
+    fetchTodos();
+  }, []);
+
   return (
     <div className="App">
-      <h1>Post Cards</h1>
+      <h1>Todo List</h1>
+      <Container sx={{ marginBottom: "20px" }}>
+        <Grid container spacing={5}>
+          <TodoList todos={todos} visible={visible} setVisible={setVisible} />
+        </Grid>
+      </Container>
+      <hr></hr>
 
+      <h1>Post Cards</h1>
       <Container sx={{ marginBottom: "20px" }}>
         <Grid container spacing={5}>
           <PostList posts={posts} />
