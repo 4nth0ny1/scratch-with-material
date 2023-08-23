@@ -4,4 +4,4 @@
 - [x] - PostList with Material UI Pagination
 - [x] - TourCards Material UI
 - [x] - Add React Router Dom
-- [] - Add Material UI Navbar
+- [x] - Add Material UI Navbar
