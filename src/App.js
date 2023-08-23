@@ -5,13 +5,16 @@ import Home from "./pages/Home";
 import TodoPage from "./pages/TodoPage";
 import PostPage from "./pages/PostPage";
 import TourPage from "./pages/TourPage";
+import TodoDetailPage from "./pages/TodoDetailPage";
 
 export default function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="todos" element={<TodoPage />} />
+        <Route path="todos" element={<TodoPage />}>
+          <Route path=":id" element={<TodoDetailPage />} />
+        </Route>
         <Route path="posts" element={<PostPage />} />
         <Route path="tour" element={<TourPage />} />
       </Routes>

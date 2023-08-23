@@ -6,3 +6,4 @@
 - [x] - Add React Router Dom
 - [x] - Add Material UI Navbar
 - [x] - Create TourPage
+- [] - Create TodoDetailPage

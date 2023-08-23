@@ -3,6 +3,10 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
+import TodoDetailPage from "../pages/TodoDetailPage";
+import { Route, Routes } from "react-router-dom";
+import React from "react";
 
 export default function TodoList({ todos, visible, setVisible }) {
   const showMoreTodos = () => {
@@ -22,6 +26,9 @@ export default function TodoList({ todos, visible, setVisible }) {
                   <Typography component="p" variant="body2" paddingY={1}>
                     {todo.completed}
                   </Typography>
+                  <Link to={`/todos/${todo.id}`}>
+                    <Button>View</Button>
+                  </Link>
                 </Box>
               </Paper>
             </Grid>
