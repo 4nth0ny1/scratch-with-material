@@ -12,9 +12,8 @@ export default function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="todos" element={<TodoPage />}>
-          <Route path=":id" element={<TodoDetailPage />} />
-        </Route>
+        <Route path="todos" element={<TodoPage />} />
+        <Route path="/todos/:id" element={<TodoDetailPage />} />
         <Route path="posts" element={<PostPage />} />
         <Route path="tour" element={<TourPage />} />
       </Routes>

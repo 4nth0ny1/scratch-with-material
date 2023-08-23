@@ -7,8 +7,10 @@ import { Link } from "react-router-dom";
 import TodoDetailPage from "../pages/TodoDetailPage";
 import { Route, Routes } from "react-router-dom";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function TodoList({ todos, visible, setVisible }) {
+  const navigate = useNavigate();
   const showMoreTodos = () => {
     setVisible((prevValue) => prevValue + 4);
   };
@@ -26,9 +28,16 @@ export default function TodoList({ todos, visible, setVisible }) {
                   <Typography component="p" variant="body2" paddingY={1}>
                     {todo.completed}
                   </Typography>
-                  <Link to={`/todos/${todo.id}`}>
-                    <Button>View</Button>
-                  </Link>
+                  {/* <Link navigate={`/todos/${todo.id}`}> */}
+                  <Button
+                    onClick={() => {
+                      navigate(`/todos/${todo.id}`);
+                    }}
+                  >
+                    View
+                  </Button>
+
+                  {/* </Link> */}
                 </Box>
               </Paper>
             </Grid>
