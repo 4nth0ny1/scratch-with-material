@@ -21,6 +21,7 @@ const navItems = [
   { link: "/", name: "Home" },
   { link: "/todos", name: "Todos" },
   { link: "/posts", name: "Posts" },
+  { link: "/tour", name: "Tour" },
 ];
 
 function DrawerAppBar(props) {

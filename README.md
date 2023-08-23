@@ -5,3 +5,4 @@
 - [x] - TourCards Material UI
 - [x] - Add React Router Dom
 - [x] - Add Material UI Navbar
+- [x] - Create TourPage
