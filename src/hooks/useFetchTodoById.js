@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 
 export const useFetchTodoById = (id) => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -13,8 +14,9 @@ export const useFetchTodoById = (id) => {
       } catch (error) {
         console.log(error);
       }
+      setLoading(false);
     };
     fetchData();
   }, []);
-  return { data };
+  return { data, loading };
 };

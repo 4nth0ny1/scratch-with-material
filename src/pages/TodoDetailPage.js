@@ -5,14 +5,18 @@ import { useFetchTodoById } from "../hooks/useFetchTodoById";
 
 export default function TodoDetailPage() {
   let params = useParams();
-  // const [todo, setTodo] = useState({});
-  const { data: todo } = useFetchTodoById(params.id);
+  const { data: todo, loading } = useFetchTodoById(params.id);
 
   return (
     <div>
-      <h2>{todo.title}</h2>
-      <br></br>
-      <p>{todo.completed ? "completed" : "not complete"}</p>
+      {loading && <div>Loading ...</div>}
+      {!loading && (
+        <div>
+          <h2>{todo.title}</h2>
+          <br></br>
+          <p>{todo.completed ? "completed" : "not complete"}</p>
+        </div>
+      )}
     </div>
   );
 }
