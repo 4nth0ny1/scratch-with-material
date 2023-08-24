@@ -7,4 +7,4 @@
 - [x] - Add Material UI Navbar
 - [x] - Create TourPage
 - [x] - Create TodoDetailPage
-- [] - abstract fetch hooks
+- [x] - abstract fetch hooks
