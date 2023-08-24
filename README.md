@@ -6,4 +6,5 @@
 - [x] - Add React Router Dom
 - [x] - Add Material UI Navbar
 - [x] - Create TourPage
-- [] - Create TodoDetailPage
+- [x] - Create TodoDetailPage
+- [] - abstract fetch hooks
