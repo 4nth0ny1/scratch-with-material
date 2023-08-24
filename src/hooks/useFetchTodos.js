@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-export const useFetchTodoById = (id) => {
+export const useFetchTodos = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchData = async () => {
       try {
         const { data: res } = await axios.get(
-          `https://jsonplaceholder.typicode.com/todos/${id}`
+          "https://jsonplaceholder.typicode.com/todos"
         );
         setData(res);
       } catch (error) {
