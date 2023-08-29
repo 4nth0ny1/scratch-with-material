@@ -7,6 +7,7 @@ import PostPage from "./pages/PostPage";
 import TourPage from "./pages/TourPage";
 import TodoDetailPage from "./pages/TodoDetailPage";
 import StackPage from "./pages/StackPage";
+import ModalPage from "./pages/ModalPage";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="posts" element={<PostPage />} />
         <Route path="tour" element={<TourPage />} />
         <Route path="stack" element={<StackPage />} />
+        <Route path="modal" element={<ModalPage />} />
       </Routes>
     </div>
   );
