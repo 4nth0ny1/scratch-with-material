@@ -8,6 +8,7 @@ import TourPage from "./pages/TourPage";
 import TodoDetailPage from "./pages/TodoDetailPage";
 import StackPage from "./pages/StackPage";
 import ModalPage from "./pages/ModalPage";
+import QuiltPage from "./pages/QuiltPage";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="tour" element={<TourPage />} />
         <Route path="stack" element={<StackPage />} />
         <Route path="modal" element={<ModalPage />} />
+        <Route path="quilt" element={<QuiltPage />} />
       </Routes>
     </div>
   );

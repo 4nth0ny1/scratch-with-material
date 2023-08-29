@@ -24,6 +24,7 @@ const navItems = [
   { link: "/tour", name: "Tour" },
   { link: "/stack", name: "Stack" },
   { link: "/modal", name: "Modal" },
+  { link: "/quilt", name: "Quilt" },
 ];
 
 function DrawerAppBar(props) {
