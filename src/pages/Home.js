@@ -1,20 +1,26 @@
-import { Box } from "@mui/material/";
+import { Box, Container } from "@mui/material/";
 
 export default function Home() {
   return (
-    <Box
+    <Container
       sx={{
-        width: "500px",
-        height: "500px",
-        background: {
-          xs: "pink",
-          sm: "lightgreen",
-          md: "lightblue",
-          lg: "blue",
-        },
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
       }}
     >
-      Home Page
-    </Box>
+      <Box
+        sx={{
+          width: { xs: "100%", sm: "100%", md: "100%", lg: "100%" },
+          height: "500px",
+          background: {
+            xs: "pink",
+            sm: "lightgreen",
+            md: "lightblue",
+            lg: "blue",
+          },
+        }}
+      ></Box>
+    </Container>
   );
 }
